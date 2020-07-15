@@ -25,7 +25,7 @@ public class AuthorisationTest {
     }
 
     @Test
-    @DisplayName("Авторизация с корректными данными")
+    @DisplayName("Авторизация с верными данными")
     void authorisationWithCorrectData() throws SQLException {
         val loginPage = new LoginPage();
         val authInfo = UserData.getAuthInfo();
@@ -35,7 +35,7 @@ public class AuthorisationTest {
     }
 
     @Test
-    @DisplayName("Авторизация с некорректным паролем")
+    @DisplayName("Авторизация с неправильным паролем")
     void authorisationWithIncorrectPassword() {
         val loginPage = new LoginPage();
         val authInfo = UserData.getAuthInfo();
@@ -43,7 +43,7 @@ public class AuthorisationTest {
     }
 
     @Test
-    @DisplayName("Авторизация с некорректным СМС кодом")
+    @DisplayName("Авторизация с неправильным СМС кодом")
     void authorisationWithIncorrectCode() throws SQLException {
         val loginPage = new LoginPage();
         val authInfo = UserData.getAuthInfo();
